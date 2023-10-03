@@ -8,21 +8,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website</title>
     <link rel="stylesheet" href="output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="flex flex-col md:flex-row">
 
-    <div class="flex flex-col gap-10 px-7 md:px-10 py-5 md:items-center md:sticky md:top-0 md:h-screen" id="sidebar">
-        <div class="flex justify-between items-center">
-            <span class="md:text-3xl text-2xl font-semibold text-gray-600">Food Ninja</span>
-            <svg id="menu_Button" class="w-7 text-gray-700 visible md:hidden" xmlns="http://www.w3.org/2000/svg"
+    <div class="flex flex-col gap-10 py-5 px-7 md:px-10 md:items-center md:sticky md:top-0 md:h-screen" id="sidebar">
+        <div class="flex items-center justify-between">
+            <span class="text-2xl font-semibold text-gray-600 md:text-3xl">Food Ninja</span>
+            <svg id="menu_Button" class="visible text-gray-700 w-7 md:hidden" xmlns="http://www.w3.org/2000/svg"
                 fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
         </div>
         <ul class="hidden md:block" id="menu">
             <li
-                class="flex items-center mb-4 md:justify-end gap-3 px-4 py-2 transition ease-out delay-75 rounded-lg md:px-7 hover:text-red-600 hover:cursor-pointer hover:shadow-md">
+                class="flex items-center gap-3 px-4 py-2 mb-4 transition ease-out delay-75 rounded-lg md:justify-end md:px-7 hover:text-red-600 hover:cursor-pointer hover:shadow-md">
                 <a href="#"><span>Home</span></a>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-5">
@@ -31,7 +32,7 @@
                 </svg>
             </li>
             <li
-                class="flex items-center  mb-4 md:justify-end gap-3 px-4 py-2 transition ease-out delay-75 rounded-lg md:px-7 hover:cursor-pointer hover:text-red-600 hover:shadow-md hover:border-0">
+                class="flex items-center gap-3 px-4 py-2 mb-4 transition ease-out delay-75 rounded-lg md:justify-end md:px-7 hover:cursor-pointer hover:text-red-600 hover:shadow-md hover:border-0">
                 <a href="#"><span>About</span></a>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-5">
@@ -41,7 +42,7 @@
 
             </li>
             <li
-                class="flex items-center mb-4 md:justify-end gap-3 px-4 py-2 rounded-lg md:px-7 hover:cursor-pointer hover:text-red-600 hover:shadow-md hover:border-0">
+                class="flex items-center gap-3 px-4 py-2 mb-4 rounded-lg md:justify-end md:px-7 hover:cursor-pointer hover:text-red-600 hover:shadow-md hover:border-0">
                 <a href="#"><span>Contact</span></a>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="w-5">
@@ -70,10 +71,10 @@
         <div class="h-px border-2 border-gray-300"></div>
 
         <div class="grid gap-8 mt-8 sm:grid-cols-3">
-            <div class="overflow-hidden bg-white rounded-md shadow-lg cursor-pointer hover:shadow-2xl relative">
+            <div class="relative overflow-hidden bg-white rounded-md shadow-lg cursor-pointer hover:shadow-2xl">
                 <img class="w-full" src="img/bstew.webp">
                 <div
-                    class="flex bg-orange-100 md:hover:shadow-lg w-20 py-2 justify-center items-center rounded-2xl absolute top-0 ml-2 mt-2">
+                    class="absolute top-0 flex items-center justify-center w-20 py-2 mt-2 ml-2 bg-orange-100 md:hover:shadow-lg rounded-2xl">
                     <svg class="w-4 text-stone-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round"
@@ -87,10 +88,10 @@
                 </div>
             </div>
 
-            <div class="overflow-hidden bg-white rounded-md shadow-lg cursor-pointer hover:shadow-2xl relative     ">
+            <div class="relative overflow-hidden bg-white rounded-md shadow-lg cursor-pointer hover:shadow-2xl ">
                 <img class="w-full" src="img/vegnoodles.jpg">
                 <div
-                    class="flex bg-orange-100 md:hover:shadow-lg w-20 py-2 justify-center items-center rounded-2xl absolute top-0 ml-2 mt-2">
+                    class="absolute top-0 flex items-center justify-center w-20 py-2 mt-2 ml-2 bg-orange-100 md:hover:shadow-lg rounded-2xl">
                     <svg class="w-4 text-stone-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round"
@@ -104,10 +105,10 @@
                 </div>
             </div>
 
-            <div class="overflow-hidden bg-white rounded-md shadow-lg cursor-pointer hover:shadow-2xl relative">
+            <div class="relative overflow-hidden bg-white rounded-md shadow-lg cursor-pointer hover:shadow-2xl">
                 <img class="w-full" src="img/tofustew.jpg">
                 <div
-                    class="flex bg-orange-100 md:hover:shadow-lg w-20 py-2 justify-center items-center rounded-2xl absolute top-0 ml-2 mt-2">
+                    class="absolute top-0 flex items-center justify-center w-20 py-2 mt-2 ml-2 bg-orange-100 md:hover:shadow-lg rounded-2xl">
                     <svg class="w-4 text-stone-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                         strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                         <path strokeLinecap="round" strokeLinejoin="round"
